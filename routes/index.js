@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 const donateRoutes = require('./donate');
 const apiRoutes = require('./api');
+const stripeRoutes = require('./stripe');
+const bodyParser = require('body-parser')
 // const { rateLimit } = require('express-rate-limit');
 
 

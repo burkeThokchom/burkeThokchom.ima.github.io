@@ -5,10 +5,11 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "NODE_ENV=local nodemon ./bin/www",
-    "prod": "NODE_ENV=production node ./bin/www"
+    "prod": "NODE_ENV=production npm install &&  node ./bin/www"
   },
   "dependencies": {
     "axios": "^1.6.5",
+    "body-parser": "^1.20.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.3.2",
