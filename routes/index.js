@@ -23,5 +23,4 @@ router.use('/api', apiRoutes);
 
 router.use('/stripe-webhook',  bodyParser.raw({type: 'application/json'}), stripeRoutes)
 
-
 module.exports = router;
