@@ -4,6 +4,7 @@ var router = express.Router();
 /* GET users listing. */
 router.post('/', function(req, res, next) {
     const event = req.body;
+    console.log(event.body)
     // Handle the event
     switch (event.type) {
       case 'payment_intent.succeeded':
