@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel='stylesheet' href='/stylesheets/donate.css' />
+  
+</head>
+<body>
+    <h2>Payment Page</h2>
+    <form id="paymentForm">
+        <label for="currency">Currency:</label>
+        <select type="select" id="currency" name="currency" required>
+            <% for(let i =0;i < currencies.length; i++){ %>
+                <option> <%= currencies[i] %> </option>
+            <% } %>
+        </select>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" step="1" value="1" required>
+
+        <!-- Additional input fields can be added as needed -->
+
+        <button type="button" onclick= "processPayment('<%= API_ENDPOINT %>')">Make Payment</button>
+    </form>
+    <script src="/javascripts/donate.js" defer></script>
+</body>
+</html>
